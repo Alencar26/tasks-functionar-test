@@ -36,6 +36,10 @@ public class TasksPage extends BasePage {
 	}
 
 	public String validarMensagemDeSucesso() {
-		return dsl.validarMensagem();
+		return dsl.validarTexto("message");
+	}
+
+	public String validarBuildDeProducao() {
+		return dsl.validarTexto("version");
 	}
 }

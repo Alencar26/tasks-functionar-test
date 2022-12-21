@@ -19,7 +19,7 @@ public class DSL {
         escrever(By.id(id), texto);
     }
 
-    public String validarMensagem() {
-        return getDriver().findElement(By.id("message")).getText();
+    public String validarTexto(String id) {
+        return getDriver().findElement(By.id(id)).getText();
     }
 }
