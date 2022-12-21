@@ -22,4 +22,8 @@ public class DSL {
     public String validarTexto(String id) {
         return getDriver().findElement(By.id(id)).getText();
     }
+
+    public void clicarElementoXPath(String xpath) {
+        getDriver().findElement(By.xpath(xpath)).click();
+    }
 }

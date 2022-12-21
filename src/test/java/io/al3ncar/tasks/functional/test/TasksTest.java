@@ -52,4 +52,18 @@ public class TasksTest extends BaseTest {
         page.clicarNoBotaoSalvar();
         Assert.assertEquals("Fill the due date", page.validarMensagemDeSucesso());
     }
+
+    @Test
+    public void deveRemoverUmaTarefaComSucesso() {
+        //Adicionar tarefa cm sucesso:
+        page.clicarNoBotaoAddTodo();
+        page.adicionarTask("Essa tarefa vai ser deletada.");
+        page.adicionarDataFuturaEmDias(2);
+        page.clicarNoBotaoSalvar();
+        Assert.assertEquals("Success!", page.validarMensagemDeSucesso());
+
+        //Remover tarefa com sucesso:
+        page.clicarNoBotaoRemover();
+        Assert.assertEquals("Success!", page.validarMensagemDeSucesso());
+    }
 }

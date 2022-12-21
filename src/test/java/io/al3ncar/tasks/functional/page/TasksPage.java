@@ -42,4 +42,8 @@ public class TasksPage extends BasePage {
 	public String validarBuildDeProducao() {
 		return dsl.validarTexto("version");
 	}
+
+	public void clicarNoBotaoRemover() {
+		dsl.clicarElementoXPath("//a[@class='btn btn-outline-danger btn-sm'] ");
+	}
 }
